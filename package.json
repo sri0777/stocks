@@ -1,18 +1,23 @@
 {
-  "homepage" : "https://sri0777.github.io/stocks/",
+  "homepage": "https://sri0777.github.io/stocks/",
   "name": "stocks",
   "version": "1.0.0",
   "description": "\"Investing Wisely\"",
   "main": "serve.js",
   "scripts": {
-    "test": "node serve.js",
-    "predeploy" : "npm run build",
-    "deploy" : "gh-pages -d dist"
+    "test": "jest",
+    "start": "node serve.js"
   },
   "author": "\"Srijan Kumar\"",
   "license": "ISC",
   "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "ejs": "^3.1.10",
     "express": "^4.19.2",
-    "mongodb": "^6.8.0"
+    "express-session": "^1.18.0",
+    "mongodb": "^6.8.0",
+    "nodemailer": "^6.9.15",
+    "stock-nse-india": "^1.1.6"
   }
 }

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wealth</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2 style="text-align: center; color: rgb(2, 27, 19); margin-top: 50px">
+      Greetings! Investors
+    </h2>
+    <div class="form-box">
+      <div class="button-box">
+        <div id="btn"></div>
+        <button id="login-btn" class="toggle-btn">Login</button>
+        <button id="register-btn" class="toggle-btn">Register</button>
+      </div>
+      <form action="/login" method="post" id="login" class="input-grp">
+        <input type="text" class="inp-field" name="username" placeholder="Username" required>
+        <input type="password" class="inp-field" name="password" placeholder="Password" required>
+        <button type="submit" class="submit-btn">Login</button>
+      </form>
+      <form action="/register" method="post" id="register" class="input-grp" style="left: 450px;">
+        <input type="text" class="inp-field" name="username" placeholder="Username" required>
+        <input type="email" class="inp-field" name="email" placeholder="Email" required>
+        <input type="password" class="inp-field" name="password" placeholder="Password" required>
+        <button type="submit" class="submit-btn">Register</button>
+      </form>
+    </div>
+  </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var x = document.getElementById("login");
+      var y = document.getElementById("register");
+      var z = document.getElementById("btn");
+
+      var loginButton = document.getElementById("login-btn");
+      var registerButton = document.getElementById("register-btn");
+
+      loginButton.addEventListener("click", function () {
+        x.style.left = "50px";
+        y.style.left = "450px";
+        z.style.left = "0";
+      });
+
+      registerButton.addEventListener("click", function () {
+        x.style.left = "-400px";
+        y.style.left = "50px";
+        z.style.left = "110px";
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./setLimit.css" />
+  </head>
+  <body>
+    <form action="/submitStock" method="post">
+      <div class="stock-alert-page">
+        <h4 id="diplaycode"><%=stock["Security Code"]%></h4>
+        <h2 id="stock-name-display"><%=stock["Issuer Name"]%></h2>
+
+        <label for="target-price"
+          >Set Your Target Price: <small>Set upto 50%</small></label
+        >
+        <input
+          type="number"
+          name="target"
+          id="target-price"
+          placeholder="Enter your target price"
+        />
+
+        <label for="current-price">Current Price:</label>
+        <input
+          type="number"
+          name="current"
+          id="current-price"
+          value="<%= stockPrice %>"
+          readonly
+        />
+
+        <label for="stop-loss-price">Set Your Stop Loss Price:</label>
+        <input
+          type="number"
+          name="stoploss"
+          id="stop-loss-price"
+          placeholder="Enter your stop loss price"
+        />
+
+        <!-- hidden input-->
+       <input type="hidden" name="issuerId" value="<%= stock["Security Id"] %>">
+       <input type="hidden" name="issuerName" value="<%= stock["Issuer Name"] %>">
+        
+
+        <button type="submit" id="set-alert-btn">Create Alert</button>
+      </div>
+    </form>
+  </body>
+</html>

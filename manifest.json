@@ -4,11 +4,12 @@
   "description": "Select Your Stocks",
   "version": "1.0",
   "action": {
-    "default_popup": "/views/login.html"
+    "default_popup": "public/views/login.html"
   },
+  "permissions": ["activeTab", "storage"],
   "web_accessible_resources": [
     {
-      "resources": ["/assets/original-bcdb1b38f8c1361733a0b144101ebbee.jpg"],
+      "resources": ["views/login.html", "views/style.css", "script.js"],
       "matches": ["<all_urls>"]
     }
   ],
